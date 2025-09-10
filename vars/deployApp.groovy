@@ -8,5 +8,6 @@ def call(String composeFile = "docker-compose.yaml") {
         cat ${composeFile}
     """
 
-    sh "/usr/local/bin/docker-compose -f ${composeFile} up --build -d"
+    #sh "/usr/local/bin/docker-compose -f ${composeFile} up --build -d"
+    sh "/usr/local/bin/docker-compose -f ${composeFile} down"
 }
